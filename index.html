@@ -1,82 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Music App</title>
-
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    background-color: beige;   /* ✅ background changed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-  }
-
-  .app {
-    width: 320px;
-    background: #111;
-    border-radius: 20px;
-    padding: 20px;
-    color: white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  }
-
-  .cover {
-    width: 100%;
-    height: 220px;
-    background: cadetblue;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-    margin-bottom: 15px;
-  }
-
-  .song-info {
-    text-align: center;
-  }
-
-  .song-info h3 {
-    margin: 5px 0;
-    font-size: 18px;
-  }
-
-  .song-info p {
-    margin: 0;
-    font-size: 14px;
-    color: #aaa;
-  }
-
-  .icons {
-    display: flex;
-    justify-content: space-around;
-    margin: 15px 0;
-    font-size: 18px;
-    color: #ccc;
-  }
-
-  .progress {
-    height: 5px;
-    background: #333;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-
-  .progress-fill {
-    width: 40%;
-    height: 100%;
-    background: cadetblue;
-    border-radius: 5px;
-  }
-
-  audio {
-    width: 100%;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>Music App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -100,11 +27,16 @@
     <div class="progress-fill"></div>
   </div>
 
-  <audio controls>
+  <!-- Custom Play/Pause Button -->
+  <button id="playPauseBtn">▶ Play</button>
+
+  <audio id="audio">
     <source src="feel-it.mp3" type="audio/mpeg">
   </audio>
 
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
+
